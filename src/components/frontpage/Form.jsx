@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
+import frontImg from "../../assets/frontImg.jpeg"
 import './Form.css'
 
 function Form() {
@@ -73,24 +74,24 @@ function Form() {
         if (!isError){
             console.log('data is valid')
             localStorage.setItem("formData", JSON.stringify(data))
-            navigate('/utility')
+            navigate('/movies')
         }
     }
   return (
     <div className='main'>
+        <header className='frontimage'>
+        <img className='image' src={frontImg} style={{width:'550px', height:'630px'}} alt='image'></img>
+        <h1 className='imagenote' style={{marginTop:'-170px'}} >Discover new things on </h1>
+        <h1 className='imagenote' >Superapp</h1>
+        </header>
     <header className='container'>
         <h1 className='heading'>Super app</h1>
         <p className='para-1'>Create your new account</p>
-        <form onSubmit={(e) => {
+        <form className='formmain' onSubmit={(e) => {
             e.preventDefault()
-            validate()}}
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap : '8px'
-            }}> 
+            validate()}}>
+
             <input className='formbox' 
-            style={{border: (data.name.trim().length === 0) ? '2px,solid,red' : 'none'}}
             type='text' 
             name='' id=''
             placeholder='Name' 
@@ -137,10 +138,10 @@ function Form() {
             <span className='error-1' style={{color:'red'}}>{error.checkbox}</span>
 
 
-            <button className='start' type='submit'>Sign Up</button>
+            <button className='signupbutton' type='submit'>Sign Up</button>
         </form>
         <p className='para-2'>By clicking on signup, you agrre to Superapp <span className='span'>Terms and Conditions of Use</span></p>
-        <p className='para-2'>To learn about hoe superapp collects,uses,shares and protectsyour personal data please head Superapp <span className='span'>Privacy Policy</span></p>
+        <p className='para-3'>To learn about hoe superapp collects,uses,shares and protectsyour personal data please head Superapp <span className='span'>Privacy Policy</span></p>
     </header>
     </div>
   )

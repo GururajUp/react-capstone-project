@@ -1,0 +1,38 @@
+.notesDiv {
+    background-color: #F1C75B;
+    border-radius: 25px;
+    color: black;
+    height: 350px;
+    width: 290px;
+    padding: 10px;
+    position: absolute;
+    left: 450px;
+}
+
+.notesContainer {
+    height: 350px;
+    margin: 2px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notesH {
+    font-size: 1.5rem;
+    width: 260px;
+    background-color: #F1C75B;
+    margin-bottom: 5px;
+}
+
+.notesTextArea {
+    border-radius: 25px;
+    height: 100%;
+    resize: none;
+    border: none;
+    /* to remove border */
+    outline: none;
+    /* to remove outline  */
+    background-color: #F1C75B;
+    color: black;
+    overflow-y: auto;
+}

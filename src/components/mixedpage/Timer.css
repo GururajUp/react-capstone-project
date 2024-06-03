@@ -20,30 +20,33 @@
 }
 
 .Timer p{
-    line-height: 3;
+    line-height: 1;
     font-weight: 600;
     letter-spacing: 1.5px;
 }
 .Timer img{
     cursor: pointer;
+    width: 20px;
+    height: 20px;
 }
 
 .Timer h2{
-    font-size: 40px;
+    font-size: 20px;
     color: white;
+    margin: -0px auto;
 }
 
 .start{
-    width: 50%;
+    width: 300px;
+    height: 40px;
     position: relative;
     left: 42%;
+    top: -38px;
     background-color:#FF6A6A;
     color: white;
-    font-size: 20px;
-    padding: 5px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 400;
     border-radius: 10px;
-    bottom: 25px;
     border: #FF6A6A;
     font-family: 'DM Sans', sans-serif;
     cursor: pointer;

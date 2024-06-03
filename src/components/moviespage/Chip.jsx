@@ -1,23 +1,16 @@
 import React from 'react'
+import './movies.css'
 
-function Chip({data, allData, selectedMovies, setSelectedMovies}) {
-    const obj= allData.find((item) => item.id ===data)
+function Chip({ moviesData, id, selectedMovies, setSelectedMovies }) {
+    const obj = moviesData.find((item) => item.id ===id)
 
     const removeSelection = () => {
-        setSelectedMovies(selectedMovies.filter((item) => item !== data))
+        setSelectedMovies(selectedMovies.filter((item) => item !== id))
     }
   return (
-    <p
-    style={{
-        border: '2px solid black',
-        width: '100px',
-        margin: '10px',
-        padding: '10px',
-        display: 'inline-block'
-    }}
-    >
-        {obj.name}&nbsp; &nbsp; <span style={{cursor: 'pointer'}} onClick={removeSelection}>X</span>
-    </p>
+    <div className='chipStyle'>
+            <span>{obj.name}&nbsp;&nbsp;&nbsp;&nbsp;<span style={{ cursor: 'pointer', color : '#085C00'}} onClick={removeSelection}>X</span></span>
+        </div>
   )
 }
 

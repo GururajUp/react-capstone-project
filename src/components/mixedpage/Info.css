@@ -16,8 +16,8 @@
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 5%;
-    line-height: 1.5;
+    padding: 1%;
+    line-height: 0.2;
 }
 
 .user_genre {
@@ -26,12 +26,16 @@
     flex-wrap: wrap;
     flex-direction: row;
     color: white;
-    width: 23vw;
+    
 }
 
 .user_genre p {
     background-color: rgba(255, 255, 255, 0.3);
-    padding: 2%;
     margin-bottom: 2%;
+    width: 110px;
+    height: 20px;
+    font-size: small;
+    text-align: center;
+    padding: 2px;
     border-radius: 10px
 }

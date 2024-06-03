@@ -1,5 +1,5 @@
 .WeatherTimeDate{
-    margin-top: 4%;
+    /* margin-top: 4%; */
 }
 
 .dateDisplay{
@@ -15,6 +15,7 @@
 }
 .Weather{
     width: 30vw;
+    margin-top: -24px;
     display: flex;
     flex-direction: row;
     color: white;
@@ -27,10 +28,15 @@
 }
 
 .pressure, .humidity{
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .pressure pre, .humidity pre{
     font-family: 'DM Sans', sans-serif;
-    text-align: start;
+    /* text-align: start; */
+}
+.partition{
+    color: white;
+    font-size: 36px;
+    margin-top: 20px;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import './movies.css'
 
 function Block({data, selectedMovies, setSelectedMovies}) {
     function handleSelection () {
@@ -8,26 +9,17 @@ function Block({data, selectedMovies, setSelectedMovies}) {
             setSelectedMovies([...selectedMovies, data.id])
         }
     }
-    console.log(selectedMovies)
+    // console.log(selectedMovies)
   return (
-    <div
-    style={{
-        border: selectedMovies.includes(data.id) 
-        ? '2px solid green'
-        : '2px solid black',
-        width: '200px',
-        height: '200px',
-        padding:'10px',
-        margin: '10px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: selectedMovies.includes(data.id)
-        ? 'green' 
-        : 'white'
-    }}
-    onClick={handleSelection}
-    >{data.name}</div>
+    <div style={{
+        border: selectedMovies.includes(data.id) ? '4px solid #11B800' :'4px solid black',
+        backgroundColor: (data.color)
+            }}
+        className='boxStyle'
+        onClick={handleSelection}>
+        <span style={{ display: 'block', color: 'white' }}>{data.name}</span>
+        <img src={data.img} alt="genreImg" className='boxImg' />
+    </div>
   )
 }
 

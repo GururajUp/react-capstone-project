@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './News.css'
 
 export default function News() {
   const [news, setNews] = useState(null);
@@ -15,14 +16,13 @@ export default function News() {
   const random = Math.floor(Math.random() * 100);
 
   return (
-    <div>
-      <h1>News</h1>
+    <div className="header">
       {news ? (
         <div>
-          <p> {news.posts[0].title}</p>
+          <p style={{color:'white'}}> {news.posts[0].title}</p>
           {/* <p dangerouslySetInnerHTML={_html:news.posts[0].highlightText}></p> */}
-          <p dangerouslySetInnerHTML={createMarkup()}></p>
-          <img src={news.posts[0].thread.main_image} alt="news" />
+          <img style={{width:'300px',height:'300px'}} src={news.posts[0].thread.main_image} alt="news" />
+          <p style={{color:'white'}} dangerouslySetInnerHTML={createMarkup()}></p>
         </div>
       ) : (
         <p>Loading...</p>

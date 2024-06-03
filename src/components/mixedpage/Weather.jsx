@@ -55,18 +55,23 @@ function Weather() {
         <div className='Weather'>
           <div className='condition'>
             <img src={weather.current.condition.icon} alt="Weather Icon" height={65} width={65} />
-            <p style={{width:"125px"}}>{weather.current.condition.text}</p></div>
-            {/* <img src={Line} width={2}/> */}
+            <p style={{width:"105px", marginTop:'-10px'}}>{weather.current.condition.text}</p></div>
+
+            <span className='partition'>|</span>
+
           <div className='pressure'>
-            <p style={{fontSize:"40px"}}>{weather.current.temp_c}°C </p>
-            <pre><img src={Thermo} alt='icon' style={{position: "relative", top:"10px", paddingRight:"10px"}}/><span> {weather.current.pressure_mb} mbar<br/>       Pressure</span></pre>
+            <p style={{fontSize:"30px"}}>{weather.current.temp_c}°C </p>
+            <pre style={{marginTop:'-30px'}}><img src={Thermo} alt='icon' style={{position: "relative", }}/><span > {weather.current.pressure_mb} mbar<br/>       Pressure</span></pre>
           </div>
-          {/* <img src={Line} width={2}/> */}
+
+          <span className='partition'>|</span>
+
           <div className='humidity'>
             <pre><img src={Wind} alt='icon' style={{position: "relative", top:"10px", paddingRight:"10px"}}/><span>{weather.current.wind_kph} km/h<br/>          Wind</span></pre>
-            <pre><img src={Humidity} alt='icon' style={{position: "relative", top:"12px", paddingRight:"10px"}}/><span> {weather.current.humidity}%<br/>        Humidity</span></pre>
+            <pre><img src={Humidity} alt='icon' style={{position: "relative"}}/><span> {weather.current.humidity}%<br/>        Humidity</span></pre>
           </div>
-        </div> : <> </>}
+        </div> 
+        : <> </>}
 
     </div>
   )
